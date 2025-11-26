@@ -1,0 +1,12 @@
+<Sysmon schemaversion="4.50">
+  <HashAlgorithms>md5</HashAlgorithms>
+  <EventFiltering>
+    <ProcessCreate onmatch="include">
+      <Image condition="end with">python.exe</Image>
+    </ProcessCreate>
+    
+    <FileCreate onmatch="include">
+      <TargetFilename condition="end with">.locked</TargetFilename>
+    </FileCreate>
+  </EventFiltering>
+</Sysmon>
