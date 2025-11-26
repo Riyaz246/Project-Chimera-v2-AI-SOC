@@ -1,0 +1,9 @@
+<group name="local,syslog,sshd,">
+  <rule id="100005" level="12">
+    <if_sid>61613</if_sid> <field name="win.eventdata.targetFilename">\.locked$</field>
+    <description>RANSOMWARE DETECTED: File encrypted with .locked extension</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule>
+</group>
